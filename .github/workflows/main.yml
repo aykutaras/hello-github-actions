@@ -17,3 +17,10 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "BB"
+  somemore:
+    name: Take 4 for Actions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/hello-world-javascript-action@master
+      with:
+        who-to-greet: 'Mona the Octocat'
