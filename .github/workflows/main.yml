@@ -9,3 +9,11 @@ jobs:
     - uses: ./action-a
       env:
         MY_NAME: "AA"
+  test:
+    name: Take 3 for Actions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./action-a
+      env:
+        MY_NAME: "BB"
