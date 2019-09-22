@@ -1,11 +1,26 @@
-name: A workflow for my Hello World file
+name: First workflow for actions
 on: push
 jobs:
   build:
-    name: Hello world action
+    name: Take 2 for Actions
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - uses: ./action-a
       env:
-        MY_NAME: "Mona"
+        MY_NAME: "AA"
+  test:
+    name: Take 3 for Actions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: ./action-a
+      env:
+        MY_NAME: "BB"
+  somemore:
+    name: Take 4 for Actions
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/hello-world-javascript-action@master
+      with:
+        who-to-greet: 'Mona the Octocat'
